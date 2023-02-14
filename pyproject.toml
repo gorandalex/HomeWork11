@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "homework11"
+version = "0.1.0"
+description = ""
+authors = ["gorandalex <andrii.gorobets@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+sqlalchemy = "^2.0.3"
+psycopg2 = "^2.9.5"
+alembic = "^1.9.3"
+fastapi = "^0.91.0"
+uvicorn = {extras = ["standard"], version = "^0.20.0"}
+envparse = "^0.2.0"
+asyncpg = "^0.27.0"
+pydantic = {extras = ["email"], version = "^1.10.4"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
