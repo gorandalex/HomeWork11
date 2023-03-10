@@ -53,3 +53,6 @@ class TokenModel(BaseModel):
     refresh_token: str
     token_type: str = "bearer"
     
+    
+class RequestEmail(BaseModel):
+    email: EmailStr
