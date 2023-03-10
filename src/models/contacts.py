@@ -1,6 +1,6 @@
 import enum
-from sqlalchemy import Column, Integer, String, DateTime, func, Enum, Date
-from sqlalchemy.orm import declarative_base
+from sqlalchemy import Column, Integer, String, DateTime, func, Enum, Date, ForeignKey
+from sqlalchemy.orm import declarative_base, relationship
 
 
 
@@ -16,6 +16,8 @@ class Contact(Base):
     phone = Column(String, index=True, nullable=False)
     birthday = Column(Date, index=True, nullable=False)
     description = Column(String)
+    owner_id = Column(Integer, ForeignKey("users.id"), nullable=True)
+    owner = relationship("User", backref="contacts")
 
 class Roles(enum.Enum):
     admin: str = "admin"
