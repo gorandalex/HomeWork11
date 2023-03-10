@@ -6,3 +6,5 @@
 /src/models/__pycache__
 /src/repository/__pycache__
 /src/routes/__pycache__
+/migrations/versions/__pycache__
+/src/services/__pycache__
